@@ -1,27 +1,15 @@
 package src;
 
-import java.io.File;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        filesCheck();
-    }
-
-    public static void filesCheck() {
-        for (int i = 1; ; ) {
-            String path = new Scanner(System.in).nextLine();
-            File file = new File(path);
-            boolean isFile = file.isFile();
-            boolean isDirectory = file.isDirectory();
-            if (isFile == false || isDirectory == true) {
-                System.out.println("Данный путь не содержит файла или ведёт к папке");
-            } else {
-                System.out.println("Путь указан верно");
-                System.out.println("Это файл номер " + i);
-                i++;
-            }
-        }
+        Point point1 = new Point(1, 3);
+        Point point2 = new Point(1, 3);
+        Point point3 = new Point(5, 8);
+        System.out.println(point1);
+        System.out.println(point2);
+        System.out.println(point3);
+        System.out.println(point1 == point2);
+        System.out.println(point2 == point3);
     }
 }
